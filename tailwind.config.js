@@ -8,6 +8,9 @@ module.exports = {
                 "black-custom": "hsl(0, 0%, 0%)",
                 "dark-grey": "hsl(0, 0%, 48%)",
             },
+            fontFamily: {
+                commissioner: ["Commissioner", "sans-serif"],
+            },
         },
     },
     plugins: [],
