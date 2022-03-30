@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../images/logo-mastercraft.svg";
 import { ReactComponent as IconBookmark } from "../../images/icon-bookmark.svg";
 
-const Bookmark = () => {
+const Bookmark = (props) => {
+  const [val, setVal] = useState(false);
+
+  const handleClick = () => setVal((prevState) => !prevState);
+
   return (
     <div className="card bg-white shadow-sm shadow-slate-200 w-1/2 mx-auto rounded-lg relative -top-24">
       <img
@@ -18,14 +22,20 @@ const Bookmark = () => {
       </p>
       <div className="buttons mt-10 flex justify-between px-14 pb-10">
         <div className="back">
-          <button className="px-10 py-4 bg-moderate-cyan rounded-full text-white hover:bg-dark-cyan">
+          <button
+            className="px-10 py-4 bg-moderate-cyan rounded-full text-white hover:bg-dark-cyan"
+            onClick={props.modal}
+          >
             Back this Project
           </button>
         </div>
-        <div className="bookmark">
-          <button className="flex justify-center items-center gap-4 font-bold text-dark-grey bg-gray-200 rounded-full pr-10 hover:text-slate-700">
+        <div className={val ? "text-dark-cyan" : "text-dark-grey"}>
+          <button
+            className="flex justify-center items-center gap-4 font-bold bg-gray-200 rounded-full pr-10 hover:text-slate-700"
+            onClick={handleClick}
+          >
             <IconBookmark />
-            Bookmark
+            {val ? "Bookmarked" : "Bookmark"}
           </button>
         </div>
       </div>

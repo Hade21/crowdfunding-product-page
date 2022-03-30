@@ -26,8 +26,8 @@ const Cards = (props) => {
         <button
           className={
             props.select > 0
-              ? "px-8 py-4 bg-moderate-cyan text-white font-normal rounded-full hover:bg-dark-cyan"
-              : "px-8 py-4 bg-dark-grey text-white font-normal rounded-full"
+              ? "px-8 py-4 bg-moderate-cyan text-white font-bold rounded-full text-sm hover:bg-dark-cyan"
+              : "px-8 py-4 bg-dark-grey text-white font-bold text-sm rounded-full"
           }
         >
           {props.select > 0 ? "Select Reward" : "Out of Stock"}

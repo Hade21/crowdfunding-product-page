@@ -11,6 +11,10 @@ module.exports = {
             fontFamily: {
                 commissioner: ["Commissioner", "sans-serif"],
             },
+            backgroundImage: {
+                desktop: "url('./images/image-hero-desktop.jpg')",
+                mobile: "url('./images/image-hero-mobile.jpg')",
+            },
         },
     },
     plugins: [],
